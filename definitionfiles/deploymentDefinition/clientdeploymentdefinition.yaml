@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+  labels:
+    tier: frontend
+    app: goclient
+spec:
+  selector:
+    matchLabels:
+     app: goclient
+  template:
+    metadata: 
+        name: frontend-client
+        labels:
+            tier: frontend
+            app: goclient
+    spec:
+        containers:
+            - name: goclient
+              image: srokade/goclient:testgoclient
+              env:
+                - name: SERVER_URL
+                  value: http://10.96.0.2:80
+  replicas: 4

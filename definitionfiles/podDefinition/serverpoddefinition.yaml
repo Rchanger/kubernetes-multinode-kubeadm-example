@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+    name: backend-server
+    labels:
+        tier: backend
+        app: goserver
+spec:
+    containers:
+        - name: goserver
+          image: srokade/goserver:testgoserver

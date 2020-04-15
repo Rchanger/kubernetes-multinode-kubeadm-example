@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+    name: frontend-client
+    labels:
+        tier: frontend
+        app: goclient
+spec:
+    containers:
+        - name: goclient
+          image: srokade/goclient:testgoclient
+          env:
+           - name: SERVER_URL
+             value: http://10.96.0.2:80

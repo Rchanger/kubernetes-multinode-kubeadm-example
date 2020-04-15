@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deployment
+  labels:
+    tier: backend
+    app: goserver
+spec:
+  selector:
+    matchLabels:
+     app: goserver
+  template:
+    metadata: 
+        name: backend-server
+        labels:
+            tier: backend
+            app: goserver
+    spec:
+        containers:
+            - name: goserver
+              image: srokade/goserver:testgoserver
+  replicas: 4

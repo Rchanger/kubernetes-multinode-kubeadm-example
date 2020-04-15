@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata: 
+ name: client-nodeport-service
+ labels:
+    test: client-nodeport-service
+spec:
+  type: NodePort
+  ports:
+    - targetPort: 9090
+      port: 81
+  selector:
+    app: goclient      
