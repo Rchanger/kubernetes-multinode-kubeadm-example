@@ -21,11 +21,16 @@ And verious service to enable communication between pods and node present inside
 	5. Assign static IP to each vm interface created by the network from above(step 4) step. Starting from the next ip address.
 		To assign the IP perform the following steps.
 		1. Edit __/etc/network/interfaces__ file and add the static IP configuration
-		for eg  auto enp0s8
-			iface enp0s8 inet static
-		    	address 192.168.56.2
-		    	netmask 255.255.255.0
-		reboot the machine to apply changes.
+	         
+		 For eg.<br/>
+		 ~~~
+	          auto enp0s8
+	          iface enp0s8 inet static
+	          address 192.168.56.2
+	          netmask 255.255.255.0
+		  ~~~
+	reboot the machine to apply changes.
+	
 	6. Mark the swappoff flag by executing following command:
 		~~~ 
 		swapoff -a 
