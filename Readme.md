@@ -161,7 +161,6 @@ And verious service to enable communication between pods and node present inside
     4. create ssh tunnel from a remote host outside of the cluster where you would access dashboard:
       ~~~
        ssh -L 9999:127.0.0.1:8001 -N -f -l <user name> <k8s master host name or ip>
-       "-L" local port forwarding
       ~~~
     5. open a browser with the following api:
      http://localhost:9999/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
