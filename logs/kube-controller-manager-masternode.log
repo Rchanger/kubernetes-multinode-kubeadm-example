@@ -1,0 +1,197 @@
+I0417 11:51:01.711366       1 serving.go:313] Generated self-signed cert in-memory
+I0417 11:51:02.797616       1 controllermanager.go:161] Version: v1.18.1
+I0417 11:51:02.801411       1 secure_serving.go:178] Serving securely on 127.0.0.1:10257
+I0417 11:51:02.806027       1 deprecated_insecure_serving.go:53] Serving insecurely on [::]:10252
+I0417 11:51:02.806477       1 leaderelection.go:242] attempting to acquire leader lease  kube-system/kube-controller-manager...
+I0417 11:51:02.801772       1 tlsconfig.go:240] Starting DynamicServingCertificateController
+I0417 11:51:02.801874       1 dynamic_cafile_content.go:167] Starting request-header::/etc/kubernetes/pki/front-proxy-ca.crt
+I0417 11:51:02.801905       1 dynamic_cafile_content.go:167] Starting client-ca-bundle::/etc/kubernetes/pki/ca.crt
+I0417 11:51:18.082681       1 leaderelection.go:252] successfully acquired lease kube-system/kube-controller-manager
+I0417 11:51:18.108655       1 event.go:278] Event(v1.ObjectReference{Kind:"Endpoints", Namespace:"kube-system", Name:"kube-controller-manager", UID:"df895ba6-327a-4c7b-92f6-606058d33c17", APIVersion:"v1", ResourceVersion:"205450", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' masternode_e9ac5631-e01c-46bd-ab60-7f184faec983 became leader
+I0417 11:51:18.109061       1 event.go:278] Event(v1.ObjectReference{Kind:"Lease", Namespace:"kube-system", Name:"kube-controller-manager", UID:"75eff5d2-bd20-40ff-b00f-105f52b178d6", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"205451", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' masternode_e9ac5631-e01c-46bd-ab60-7f184faec983 became leader
+I0417 11:51:18.384090       1 plugins.go:100] No cloud provider specified.
+I0417 11:51:18.450313       1 shared_informer.go:223] Waiting for caches to sync for tokens
+I0417 11:51:18.555494       1 shared_informer.go:230] Caches are synced for tokens 
+I0417 11:51:18.590780       1 controllermanager.go:533] Started "endpointslice"
+I0417 11:51:18.602820       1 endpointslice_controller.go:213] Starting endpoint slice controller
+I0417 11:51:18.602863       1 shared_informer.go:223] Waiting for caches to sync for endpoint_slice
+I0417 11:51:18.665182       1 controllermanager.go:533] Started "horizontalpodautoscaling"
+I0417 11:51:18.665901       1 horizontal.go:169] Starting HPA controller
+I0417 11:51:18.665922       1 shared_informer.go:223] Waiting for caches to sync for HPA
+I0417 11:51:18.680691       1 node_lifecycle_controller.go:78] Sending events to api server
+E0417 11:51:18.680837       1 core.go:229] failed to start cloud node lifecycle controller: no cloud provider provided
+W0417 11:51:18.680867       1 controllermanager.go:525] Skipping "cloud-node-lifecycle"
+I0417 11:51:18.700865       1 controllermanager.go:533] Started "cronjob"
+I0417 11:51:18.701239       1 cronjob_controller.go:97] Starting CronJob Manager
+I0417 11:51:18.743165       1 controllermanager.go:533] Started "csrapproving"
+I0417 11:51:18.743432       1 certificate_controller.go:119] Starting certificate controller "csrapproving"
+I0417 11:51:18.743451       1 shared_informer.go:223] Waiting for caches to sync for certificate-csrapproving
+I0417 11:51:18.773706       1 controllermanager.go:533] Started "job"
+I0417 11:51:18.775010       1 job_controller.go:144] Starting job controller
+I0417 11:51:18.775490       1 shared_informer.go:223] Waiting for caches to sync for job
+I0417 11:51:18.808500       1 controllermanager.go:533] Started "statefulset"
+I0417 11:51:18.809173       1 stateful_set.go:146] Starting stateful set controller
+I0417 11:51:18.809194       1 shared_informer.go:223] Waiting for caches to sync for stateful set
+I0417 11:51:18.854778       1 node_lifecycle_controller.go:384] Sending events to api server.
+I0417 11:51:18.870444       1 taint_manager.go:163] Sending events to api server.
+I0417 11:51:18.870619       1 node_lifecycle_controller.go:512] Controller will reconcile labels.
+I0417 11:51:18.870678       1 controllermanager.go:533] Started "nodelifecycle"
+I0417 11:51:18.871135       1 node_lifecycle_controller.go:546] Starting node controller
+I0417 11:51:18.871167       1 shared_informer.go:223] Waiting for caches to sync for taint
+I0417 11:51:18.915954       1 controllermanager.go:533] Started "persistentvolume-binder"
+I0417 11:51:18.916273       1 pv_controller_base.go:295] Starting persistent volume controller
+I0417 11:51:18.916297       1 shared_informer.go:223] Waiting for caches to sync for persistent volume
+I0417 11:51:18.929248       1 controllermanager.go:533] Started "pv-protection"
+I0417 11:51:18.929355       1 pv_protection_controller.go:83] Starting PV protection controller
+I0417 11:51:18.929367       1 shared_informer.go:223] Waiting for caches to sync for PV protection
+I0417 11:51:19.063960       1 controllermanager.go:533] Started "serviceaccount"
+I0417 11:51:19.064068       1 serviceaccounts_controller.go:117] Starting service account controller
+I0417 11:51:19.064093       1 shared_informer.go:223] Waiting for caches to sync for service account
+I0417 11:51:19.363131       1 controllermanager.go:533] Started "disruption"
+I0417 11:51:19.363243       1 disruption.go:331] Starting disruption controller
+I0417 11:51:19.363256       1 shared_informer.go:223] Waiting for caches to sync for disruption
+I0417 11:51:19.519701       1 controllermanager.go:533] Started "tokencleaner"
+W0417 11:51:19.519740       1 core.go:243] configure-cloud-routes is set, but no cloud provider specified. Will not configure cloud provider routes.
+W0417 11:51:19.519748       1 controllermanager.go:525] Skipping "route"
+I0417 11:51:19.519792       1 tokencleaner.go:118] Starting token cleaner controller
+I0417 11:51:19.519799       1 shared_informer.go:223] Waiting for caches to sync for token_cleaner
+I0417 11:51:19.519805       1 shared_informer.go:230] Caches are synced for token_cleaner 
+I0417 11:51:19.662046       1 controllermanager.go:533] Started "csrcleaner"
+I0417 11:51:19.662111       1 cleaner.go:82] Starting CSR cleaner controller
+I0417 11:51:19.813934       1 controllermanager.go:533] Started "bootstrapsigner"
+I0417 11:51:19.814030       1 shared_informer.go:223] Waiting for caches to sync for bootstrap_signer
+I0417 11:51:19.965073       1 node_ipam_controller.go:94] Sending events to api server.
+I0417 11:51:30.023609       1 range_allocator.go:82] Sending events to api server.
+I0417 11:51:30.024555       1 range_allocator.go:116] No Secondary Service CIDR provided. Skipping filtering out secondary service addresses.
+I0417 11:51:30.024810       1 controllermanager.go:533] Started "nodeipam"
+I0417 11:51:30.025045       1 node_ipam_controller.go:162] Starting ipam controller
+I0417 11:51:30.025081       1 shared_informer.go:223] Waiting for caches to sync for node
+I0417 11:51:30.039392       1 controllermanager.go:533] Started "endpoint"
+I0417 11:51:30.039675       1 endpoints_controller.go:182] Starting endpoint controller
+I0417 11:51:30.039709       1 shared_informer.go:223] Waiting for caches to sync for endpoint
+I0417 11:51:30.055923       1 controllermanager.go:533] Started "podgc"
+I0417 11:51:30.056898       1 gc_controller.go:89] Starting GC controller
+I0417 11:51:30.056943       1 shared_informer.go:223] Waiting for caches to sync for GC
+I0417 11:51:30.153007       1 controllermanager.go:533] Started "namespace"
+I0417 11:51:30.154149       1 namespace_controller.go:200] Starting namespace controller
+I0417 11:51:30.154199       1 shared_informer.go:223] Waiting for caches to sync for namespace
+I0417 11:51:30.175809       1 controllermanager.go:533] Started "daemonset"
+I0417 11:51:30.177568       1 daemon_controller.go:257] Starting daemon sets controller
+I0417 11:51:30.177619       1 shared_informer.go:223] Waiting for caches to sync for daemon sets
+I0417 11:51:30.250786       1 controllermanager.go:533] Started "csrsigning"
+W0417 11:51:30.250845       1 controllermanager.go:525] Skipping "ttl-after-finished"
+I0417 11:51:30.251333       1 certificate_controller.go:119] Starting certificate controller "csrsigning"
+I0417 11:51:30.251357       1 shared_informer.go:223] Waiting for caches to sync for certificate-csrsigning
+I0417 11:51:30.251422       1 dynamic_serving_content.go:130] Starting csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key
+I0417 11:51:30.539022       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for horizontalpodautoscalers.autoscaling
+I0417 11:51:30.539727       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for cronjobs.batch
+W0417 11:51:31.023825       1 shared_informer.go:461] resyncPeriod 45463115853247 is smaller than resyncCheckPeriod 59001767409146 and the informer has already started. Changing it to 59001767409146
+I0417 11:51:31.023946       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for serviceaccounts
+I0417 11:51:31.024005       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for deployments.apps
+I0417 11:51:31.024051       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for ingresses.networking.k8s.io
+I0417 11:51:31.024081       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for roles.rbac.authorization.k8s.io
+I0417 11:51:31.024125       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for podtemplates
+I0417 11:51:31.024148       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for networkpolicies.networking.k8s.io
+I0417 11:51:31.024178       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for ingresses.extensions
+I0417 11:51:31.024196       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for endpointslices.discovery.k8s.io
+I0417 11:51:31.024218       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for endpoints
+I0417 11:51:31.024234       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for daemonsets.apps
+I0417 11:51:31.024254       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for rolebindings.rbac.authorization.k8s.io
+I0417 11:51:31.024272       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for leases.coordination.k8s.io
+I0417 11:51:31.024330       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for poddisruptionbudgets.policy
+I0417 11:51:31.024348       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for statefulsets.apps
+I0417 11:51:31.024364       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for controllerrevisions.apps
+I0417 11:51:31.024379       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for replicasets.apps
+I0417 11:51:31.024400       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for limitranges
+I0417 11:51:31.024482       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for jobs.batch
+I0417 11:51:31.024529       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for events.events.k8s.io
+I0417 11:51:31.024543       1 controllermanager.go:533] Started "resourcequota"
+I0417 11:51:31.025012       1 resource_quota_controller.go:272] Starting resource quota controller
+I0417 11:51:31.025024       1 shared_informer.go:223] Waiting for caches to sync for resource quota
+I0417 11:51:31.025041       1 resource_quota_monitor.go:303] QuotaMonitor running
+I0417 11:51:31.208999       1 controllermanager.go:533] Started "deployment"
+I0417 11:51:31.210729       1 deployment_controller.go:153] Starting deployment controller
+I0417 11:51:31.210758       1 shared_informer.go:223] Waiting for caches to sync for deployment
+I0417 11:51:31.303568       1 controllermanager.go:533] Started "replicaset"
+I0417 11:51:31.303985       1 replica_set.go:181] Starting replicaset controller
+I0417 11:51:31.304006       1 shared_informer.go:223] Waiting for caches to sync for ReplicaSet
+I0417 11:51:31.408838       1 controllermanager.go:533] Started "persistentvolume-expander"
+I0417 11:51:31.409459       1 expand_controller.go:319] Starting expand controller
+I0417 11:51:31.409519       1 shared_informer.go:223] Waiting for caches to sync for expand
+I0417 11:51:31.525157       1 controllermanager.go:533] Started "pvc-protection"
+I0417 11:51:31.526582       1 pvc_protection_controller.go:101] Starting PVC protection controller
+I0417 11:51:31.526620       1 shared_informer.go:223] Waiting for caches to sync for PVC protection
+I0417 11:51:31.577363       1 controllermanager.go:533] Started "replicationcontroller"
+I0417 11:51:31.577769       1 replica_set.go:181] Starting replicationcontroller controller
+I0417 11:51:31.577786       1 shared_informer.go:223] Waiting for caches to sync for ReplicationController
+I0417 11:51:32.035516       1 request.go:621] Throttling request took 1.007150669s, request: GET:https://192.168.56.2:6443/apis/apiextensions.k8s.io/v1beta1?timeout=32s
+I0417 11:51:32.157252       1 controllermanager.go:533] Started "garbagecollector"
+I0417 11:51:32.157625       1 garbagecollector.go:133] Starting garbage collector controller
+I0417 11:51:32.157869       1 shared_informer.go:223] Waiting for caches to sync for garbage collector
+I0417 11:51:32.157931       1 graph_builder.go:282] GraphBuilder running
+W0417 11:51:32.157969       1 controllermanager.go:525] Skipping "root-ca-cert-publisher"
+I0417 11:51:32.179615       1 controllermanager.go:533] Started "ttl"
+I0417 11:51:32.179925       1 ttl_controller.go:118] Starting TTL controller
+I0417 11:51:32.179950       1 shared_informer.go:223] Waiting for caches to sync for TTL
+E0417 11:51:32.196227       1 core.go:89] Failed to start service controller: WARNING: no cloud provider provided, services of type LoadBalancer will fail
+W0417 11:51:32.196266       1 controllermanager.go:525] Skipping "service"
+I0417 11:51:32.232697       1 controllermanager.go:533] Started "attachdetach"
+I0417 11:51:32.233665       1 attach_detach_controller.go:338] Starting attach detach controller
+I0417 11:51:32.233707       1 shared_informer.go:223] Waiting for caches to sync for attach detach
+I0417 11:51:32.276534       1 controllermanager.go:533] Started "clusterrole-aggregation"
+I0417 11:51:32.277484       1 clusterroleaggregation_controller.go:149] Starting ClusterRoleAggregator
+I0417 11:51:32.277587       1 shared_informer.go:223] Waiting for caches to sync for ClusterRoleAggregator
+I0417 11:51:32.353423       1 shared_informer.go:223] Waiting for caches to sync for resource quota
+W0417 11:51:32.392532       1 actual_state_of_world.go:506] Failed to update statusUpdateNeeded field in actual state of world: Failed to set statusUpdateNeeded to needed true, because nodeName="masternode" does not exist
+W0417 11:51:32.434579       1 actual_state_of_world.go:506] Failed to update statusUpdateNeeded field in actual state of world: Failed to set statusUpdateNeeded to needed true, because nodeName="workernode1" does not exist
+I0417 11:51:32.434819       1 shared_informer.go:230] Caches are synced for TTL 
+W0417 11:51:32.435054       1 actual_state_of_world.go:506] Failed to update statusUpdateNeeded field in actual state of world: Failed to set statusUpdateNeeded to needed true, because nodeName="workernode2" does not exist
+I0417 11:51:32.463838       1 shared_informer.go:230] Caches are synced for bootstrap_signer 
+I0417 11:51:32.464042       1 shared_informer.go:230] Caches are synced for PV protection 
+I0417 11:51:32.464100       1 shared_informer.go:230] Caches are synced for certificate-csrapproving 
+I0417 11:51:32.464128       1 shared_informer.go:230] Caches are synced for certificate-csrsigning 
+I0417 11:51:32.464157       1 shared_informer.go:230] Caches are synced for namespace 
+I0417 11:51:32.481389       1 shared_informer.go:230] Caches are synced for service account 
+I0417 11:51:32.482248       1 shared_informer.go:230] Caches are synced for node 
+I0417 11:51:32.482298       1 range_allocator.go:172] Starting range CIDR allocator
+I0417 11:51:32.482307       1 shared_informer.go:223] Waiting for caches to sync for cidrallocator
+I0417 11:51:32.482316       1 shared_informer.go:230] Caches are synced for cidrallocator 
+I0417 11:51:32.579851       1 shared_informer.go:230] Caches are synced for ClusterRoleAggregator 
+I0417 11:51:32.713654       1 shared_informer.go:230] Caches are synced for daemon sets 
+I0417 11:51:32.714577       1 shared_informer.go:230] Caches are synced for ReplicationController 
+I0417 11:51:32.752224       1 shared_informer.go:230] Caches are synced for endpoint 
+I0417 11:51:32.763240       1 shared_informer.go:230] Caches are synced for GC 
+E0417 11:51:32.763280       1 driver-call.go:266] Failed to unmarshal output for command: init, output: "", error: unexpected end of JSON input
+W0417 11:51:32.763306       1 driver-call.go:149] FlexVolume: driver call failed: executable: /usr/libexec/kubernetes/kubelet-plugins/volume/exec/nodeagent~uds/uds, args: [init], error: fork/exec /usr/libexec/kubernetes/kubelet-plugins/volume/exec/nodeagent~uds/uds: no such file or directory, output: ""
+I0417 11:51:32.763325       1 shared_informer.go:230] Caches are synced for HPA 
+E0417 11:51:32.763335       1 plugins.go:729] Error dynamically probing plugins: Error creating Flexvolume plugin from directory nodeagent~uds, skipping. Error: unexpected end of JSON input
+I0417 11:51:32.763357       1 shared_informer.go:230] Caches are synced for taint 
+I0417 11:51:32.763404       1 node_lifecycle_controller.go:1433] Initializing eviction metric for zone: 
+I0417 11:51:32.808488       1 taint_manager.go:187] Starting NoExecuteTaintManager
+I0417 11:51:32.825088       1 event.go:278] Event(v1.ObjectReference{Kind:"Node", Namespace:"", Name:"workernode1", UID:"05aaed0e-3855-4a97-bfd9-6b8a799de4d0", APIVersion:"v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RegisteredNode' Node workernode1 event: Registered Node workernode1 in Controller
+I0417 11:51:32.832782       1 shared_informer.go:230] Caches are synced for endpoint_slice 
+I0417 11:51:32.913695       1 shared_informer.go:230] Caches are synced for expand 
+I0417 11:51:32.914329       1 shared_informer.go:230] Caches are synced for attach detach 
+I0417 11:51:32.918249       1 shared_informer.go:230] Caches are synced for persistent volume 
+I0417 11:51:32.927436       1 shared_informer.go:230] Caches are synced for PVC protection 
+I0417 11:51:32.953667       1 shared_informer.go:230] Caches are synced for resource quota 
+I0417 11:51:32.961965       1 shared_informer.go:230] Caches are synced for garbage collector 
+I0417 11:51:32.962093       1 garbagecollector.go:142] Garbage collector: all resource monitors have synced. Proceeding to collect garbage
+I0417 11:51:32.989947       1 shared_informer.go:230] Caches are synced for disruption 
+I0417 11:51:32.990003       1 disruption.go:339] Sending events to api server.
+I0417 11:51:32.993665       1 shared_informer.go:230] Caches are synced for job 
+I0417 11:51:33.067702       1 shared_informer.go:230] Caches are synced for ReplicaSet 
+I0417 11:51:33.083064       1 shared_informer.go:230] Caches are synced for stateful set 
+I0417 11:51:33.083130       1 shared_informer.go:230] Caches are synced for deployment 
+I0417 11:51:33.086952       1 shared_informer.go:230] Caches are synced for resource quota 
+I0417 11:51:33.619819       1 shared_informer.go:223] Waiting for caches to sync for garbage collector
+I0417 11:51:33.619889       1 shared_informer.go:230] Caches are synced for garbage collector 
+I0417 11:51:33.629380       1 event.go:278] Event(v1.ObjectReference{Kind:"Pod", Namespace:"default", Name:"client-deployment-ffcfc744b-6jzrw", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'TaintManagerEviction' Cancelling deletion of Pod default/client-deployment-ffcfc744b-6jzrw
+I0417 11:51:33.629442       1 event.go:278] Event(v1.ObjectReference{Kind:"Pod", Namespace:"default", Name:"server-deployment-58dcbc5d59-fs5tj", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'TaintManagerEviction' Cancelling deletion of Pod default/server-deployment-58dcbc5d59-fs5tj
+I0417 11:51:33.629462       1 event.go:278] Event(v1.ObjectReference{Kind:"Pod", Namespace:"default", Name:"client-deployment-ffcfc744b-6vkzs", UID:"", APIVersion:"", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'TaintManagerEviction' Cancelling deletion of Pod default/client-deployment-ffcfc744b-6vkzs
+I0417 11:51:33.630725       1 event.go:278] Event(v1.ObjectReference{Kind:"Node", Namespace:"", Name:"workernode2", UID:"29065c2c-ab0c-46cf-95f2-913beab466b5", APIVersion:"v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RegisteredNode' Node workernode2 event: Registered Node workernode2 in Controller
+W0417 11:51:33.761771       1 node_lifecycle_controller.go:1048] Missing timestamp for Node workernode1. Assuming now as a timestamp.
+I0417 11:51:33.762839       1 event.go:278] Event(v1.ObjectReference{Kind:"Node", Namespace:"", Name:"masternode", UID:"09f45d2e-66d0-4c1b-a2a4-10f863e3d01a", APIVersion:"v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'RegisteredNode' Node masternode event: Registered Node masternode in Controller
+W0417 11:51:33.767227       1 node_lifecycle_controller.go:1048] Missing timestamp for Node workernode2. Assuming now as a timestamp.
+W0417 11:51:33.771807       1 node_lifecycle_controller.go:1048] Missing timestamp for Node masternode. Assuming now as a timestamp.
+I0417 11:51:33.771937       1 node_lifecycle_controller.go:1249] Controller detected that zone  is now in state Normal.

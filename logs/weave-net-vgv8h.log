@@ -1,0 +1,47 @@
+DEBU: 2020/04/17 11:51:54.908821 [kube-peers] Checking peer "a2:0a:bb:e8:2f:40" against list &{[{a2:0a:bb:e8:2f:40 masternode} {92:3e:e1:53:9f:29 workernode1} {8e:cd:37:03:78:10 workernode2}]}
+INFO: 2020/04/17 11:51:55.514765 Command line options: map[conn-limit:200 datapath:datapath db-prefix:/weavedb/weave-net docker-api: expect-npc:true host-root:/host http-addr:127.0.0.1:6784 ipalloc-init:consensus=2 ipalloc-range:10.32.0.0/12 metrics-addr:0.0.0.0:6782 name:a2:0a:bb:e8:2f:40 nickname:masternode no-dns:true port:6783]
+INFO: 2020/04/17 11:51:55.516080 weave  2.6.2
+INFO: 2020/04/17 11:51:57.731123 Bridge type is bridged_fastdp
+INFO: 2020/04/17 11:51:57.731156 Communication between peers is unencrypted.
+INFO: 2020/04/17 11:51:58.067885 Our name is a2:0a:bb:e8:2f:40(masternode)
+INFO: 2020/04/17 11:51:58.068354 Launch detected - using supplied peer list: [192.168.43.22 192.168.43.219]
+INFO: 2020/04/17 11:51:58.733337 Checking for pre-existing addresses on weave bridge
+INFO: 2020/04/17 11:51:58.909222 [allocator a2:0a:bb:e8:2f:40] Initialising with persisted data
+INFO: 2020/04/17 11:51:58.909297 Sniffing traffic on datapath (via ODP)
+INFO: 2020/04/17 11:51:59.074569 ->[192.168.43.22:6783] attempting connection
+INFO: 2020/04/17 11:51:59.076308 ->[192.168.43.219:6783] attempting connection
+INFO: 2020/04/17 11:51:59.097799 ->[192.168.43.22:6783|92:3e:e1:53:9f:29(workernode1)]: connection ready; using protocol version 2
+INFO: 2020/04/17 11:51:59.098612 overlay_switch ->[92:3e:e1:53:9f:29(workernode1)] using fastdp
+INFO: 2020/04/17 11:51:59.099312 ->[192.168.43.22:6783|92:3e:e1:53:9f:29(workernode1)]: connection added (new peer)
+INFO: 2020/04/17 11:51:59.103069 ->[192.168.43.219:6783|8e:cd:37:03:78:10(workernode2)]: connection ready; using protocol version 2
+INFO: 2020/04/17 11:51:59.103633 overlay_switch ->[8e:cd:37:03:78:10(workernode2)] using fastdp
+INFO: 2020/04/17 11:51:59.104005 ->[192.168.43.219:6783|8e:cd:37:03:78:10(workernode2)]: connection added (new peer)
+INFO: 2020/04/17 11:51:59.129483 Listening for HTTP control messages on 127.0.0.1:6784
+INFO: 2020/04/17 11:51:59.130081 Listening for metrics requests on 0.0.0.0:6782
+INFO: 2020/04/17 11:51:59.378697 Error checking version: Get https://checkpoint-api.weave.works/v1/check/weave-net?arch=amd64&flag_docker-version=none&flag_kernel-version=5.0.0-23-generic&flag_kubernetes-cluster-size=2&flag_kubernetes-cluster-uid=25c162e6-07dd-4a30-8ed9-3b1e8b885775&flag_kubernetes-version=v1.18.1&flag_network=fastdp&flag_network=fastdp&os=linux&signature=SXLy5UB5El0pkVSwwjTy7mKc67YRZ790i4JiuRhtEiQ%3D&version=2.6.2: dial tcp: lookup checkpoint-api.weave.works on 10.96.0.10:53: write udp 192.168.43.97:56158->10.96.0.10:53: write: operation not permitted
+INFO: 2020/04/17 11:51:59.489141 overlay_switch ->[8e:cd:37:03:78:10(workernode2)] using sleeve
+INFO: 2020/04/17 11:51:59.489205 ->[192.168.43.219:6783|8e:cd:37:03:78:10(workernode2)]: connection fully established
+INFO: 2020/04/17 11:51:59.489228 overlay_switch ->[8e:cd:37:03:78:10(workernode2)] using fastdp
+INFO: 2020/04/17 11:51:59.490264 sleeve ->[192.168.43.219:6783|8e:cd:37:03:78:10(workernode2)]: Effective MTU verified at 1438
+INFO: 2020/04/17 11:51:59.796264 ->[192.168.43.22:6783|92:3e:e1:53:9f:29(workernode1)]: connection fully established
+INFO: 2020/04/17 11:51:59.801954 sleeve ->[192.168.43.22:6783|92:3e:e1:53:9f:29(workernode1)]: Effective MTU verified at 1438
+INFO: 2020/04/17 11:52:01.561215 [kube-peers] Added myself to peer list &{[{a2:0a:bb:e8:2f:40 masternode} {92:3e:e1:53:9f:29 workernode1} {8e:cd:37:03:78:10 workernode2}]}
+DEBU: 2020/04/17 11:52:01.805803 [kube-peers] Nodes that have disappeared: map[]
+10.32.0.1
+DEBU: 2020/04/17 11:52:02.667355 registering for updates for node delete events
+WARN: 2020/04/17 11:52:04.545482 [allocator]: Delete: no addresses for 24acff3ede6f136486a33f89b03b2dfb3b929caf0d9e18a6a64bdb66f72a156f
+WARN: 2020/04/17 11:52:07.295336 [allocator]: Delete: no addresses for be9044cbd6fdaa34dc888a4a653f792a4d003686f88457dbe5fe571763bcb671
+INFO: 2020/04/17 11:52:08.726057 Discovered remote MAC 5e:5d:ca:db:55:e3 at 92:3e:e1:53:9f:29(workernode1)
+INFO: 2020/04/17 11:52:09.149712 Discovered remote MAC 0a:91:96:4e:8f:c1 at 8e:cd:37:03:78:10(workernode2)
+WARN: 2020/04/17 11:52:09.526701 [allocator]: Delete: no addresses for 7ab7fa44717b74c93dad14d9b34ef035b27de872dd2b761fe27f5a57755f5dbd
+INFO: 2020/04/17 11:52:10.172499 Discovered remote MAC 0a:54:51:2d:1d:d0 at 8e:cd:37:03:78:10(workernode2)
+WARN: 2020/04/17 11:52:10.708712 [allocator]: Delete: no addresses for 6779b7df8017d95c7f1050bf7f65e3a4de8b972ac9b1b29984ce181de143a089
+INFO: 2020/04/17 11:52:10.787178 Discovered remote MAC 2e:fb:00:49:fd:41 at 92:3e:e1:53:9f:29(workernode1)
+INFO: 2020/04/17 11:52:12.219572 Discovered remote MAC 8e:cd:37:03:78:10 at 8e:cd:37:03:78:10(workernode2)
+INFO: 2020/04/17 11:52:13.180144 Discovered remote MAC 92:3e:e1:53:9f:29 at 92:3e:e1:53:9f:29(workernode1)
+INFO: 2020/04/17 12:25:17.227250 Discovered remote MAC 92:3e:e1:53:9f:29 at 92:3e:e1:53:9f:29(workernode1)
+INFO: 2020/04/17 12:25:17.228410 Discovered remote MAC 2e:fb:00:49:fd:41 at 92:3e:e1:53:9f:29(workernode1)
+INFO: 2020/04/17 12:25:17.295842 Discovered remote MAC 5e:5d:ca:db:55:e3 at 92:3e:e1:53:9f:29(workernode1)
+INFO: 2020/04/17 12:25:48.463895 Discovered remote MAC 0a:91:96:4e:8f:c1 at 8e:cd:37:03:78:10(workernode2)
+INFO: 2020/04/17 12:25:48.925982 Discovered remote MAC 0a:54:51:2d:1d:d0 at 8e:cd:37:03:78:10(workernode2)
+INFO: 2020/04/17 12:25:49.030327 Discovered remote MAC 8e:cd:37:03:78:10 at 8e:cd:37:03:78:10(workernode2)

@@ -11,4 +11,4 @@ spec:
           image: srokade/goclient:testgoclient
           env:
            - name: SERVER_URL
-             value: http://10.96.0.2:80
+             value: http://server-clusterip-service:80
