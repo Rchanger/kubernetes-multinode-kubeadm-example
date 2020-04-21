@@ -6,7 +6,6 @@ metadata:
     test: server-clusterip-service
 spec:
   type: ClusterIP
-  clusterIP: 10.96.0.2
   ports:
     - targetPort: 8090
       port: 80
