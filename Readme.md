@@ -183,3 +183,4 @@ And verious service to enable communication between pods and node present inside
        ~~~
        eg. __kubectl config use-context demo__
 
+__You can see the snapshots of all resources running on cluster inside snapshots folder.__
