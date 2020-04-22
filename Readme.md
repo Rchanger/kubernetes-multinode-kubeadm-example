@@ -164,4 +164,22 @@ And verious service to enable communication between pods and node present inside
       ~~~
     5. open a browser with the following api:
      http://localhost:9999/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+  6. If you want to create different namespaces and deploy resources in it perform following steps:
+     1. Create namespace you want
+     ~~~
+      kubectl create namespace <name>
+     ~~~
+      eg. __kubectl create namespace demo__
+            
+     2. Create context for the namespace
+       ~~~
+        kubectl config set-context <context-name> --namespace=<namespace> --user=<user> --cluster=<cluster name>
+       ~~~
+       eg.  __kubectl config set-context demo --namespace=demo --user=kubernetes-admin --cluster=kubernetes__
+       
+     3. Switch to the desired namespace context
+       ~~~
+        kubectl config use-context <context-name>
+       ~~~
+       eg. __kubectl config use-context demo__
 
