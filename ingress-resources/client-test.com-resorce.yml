@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: client-ingress
+  annotations:
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  tls:
+  - hosts:
+    - test.com
+    secretName: test-secret
+  rules:
+  - host: test.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: client-nodeport-service
+          servicePort: 81
